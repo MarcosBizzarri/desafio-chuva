@@ -57,6 +57,64 @@ Universidade Federal do Rio de Janeiro
 
 
       </div>
+      <div class="row resumo">
+        <cartao-chuva titulo="Discussões">
+          <!-- Inicio do componente pos envio -->
+          <div class="row">
+            <p>Titulo</p>
+            <p>Subtitulo</p>
+            <p>conteudo</p>
+            <button class="btn col-md-2 botao-laranja"> Criar novo tópico </button>
+          </div>
+          <!-- Fim do componente pos envio -->
+        <div *ngIf="!mostraCriarTopico">
+          <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            
+           
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </form>
+          <button class="btn col-md-2 botao-laranja"> Enviar</button>
+        </div>
+        <div *ngIf="mostraCriarTopico">
+          <h6  class="texto-compartilhar">Compartilhe suas ideias ou dúvidas com os autores!</h6>
+
+          <div class="row imagem-chuva">
+               <img class="foto-chuva" src="/assets/img/icone1.png" alt="">
+               <img class="foto-chuva" src="/assets/img/icone2.png" alt="">
+              <img class="foto-chuva" src="/assets/img/icone3.png" alt="">
+          </div>
+ 
+          <p class="paragrafo-chuva">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+          <div class="row botao-topico"> 
+           <button (click)="criarTopico()" class="btn col-md-2 botao-laranja"><img src="/assets/img/icon-criar.png" >  Criar tópico</button>
+          </div>
+        </div>
+         <div class="row"> 
+          <topico-chuva titulo="Assunto da pergunta aparece aqui" 
+          subTitulo="Carlos Henrique Santos" 
+          conteudo="Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo..."></topico-chuva>
+         </div>
+         <div class="row"> 
+          <topico-chuva titulo="Assunto da pergunta aparece aqui" 
+          subTitulo="Carlos Henrique Santos" 
+          conteudo="Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo..."></topico-chuva>
+         </div>
+
+
+        </cartao-chuva>
+
+
+      </div>
+      
       </div>
       
     </div>

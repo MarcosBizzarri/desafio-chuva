@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
   Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. `;
 
   resumoFechado=true;
+  mostraCriarTopico=true;
 textoResumo=``;
 quebrarTexto() {
   this.textoResumo=this.textoResumoCompleto.substring(0,600).concat('... ')
@@ -29,5 +30,9 @@ if ( this.resumoFechado==true){
 } else {
   this.textoResumo=this.textoResumoCompleto
 }
+}
+
+criarTopico() {
+  this.mostraCriarTopico=false
 }
 }
