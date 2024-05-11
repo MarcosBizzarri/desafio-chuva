@@ -10,12 +10,13 @@
       <div class="col ">
         <navbar-chuva></navbar-chuva>
       
-        <!-- <h2 class="titulo-chuva">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2> -->
       <div class="row">
         
         <div class="col col-md-8">
           <h2 class="titulo-chuva">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2>
+          <div class="video-chuva">oooii</div>
         </div>
+        
         <div class="col div-botao">
           <div class="row"> 
            
@@ -26,7 +27,33 @@
            <button class="btn col-md-2 botao-laranja"><img src="/assets/img/doi.png" alt=""></button>
            
           </div>
+          
+          <h5 class="botao-subtitulo">Como citar esse trabalho?</h5>
+          <cartao-chuva titulo="Detalhes">
+            Tipo de Apresentação: Pôster
+Eixo temático: Alimentação e saúde (AS) 
+Palavras-chaves: Alimentos funcionais, alimentação escolar.
+
+Autores:
+Galileo Galilei
+Berta Lange de Morretes
+Isaac Newton
+Cesar Lattes
+Stephen Hawking
+
+Universidade Estadual de Campinas
+Universidade de São Paulo
+Instituto Nacional de Pesquisas Espaciais
+Universidade Federal do Rio de Janeiro
+          </cartao-chuva>
         </div>
+
+
+      </div>
+      <div (click)="abrirResumo()" class="row resumo">
+        <cartao-chuva titulo="Resumo">
+          {{textoResumo}} <a href="#"><span *ngIf="resumoFechado" class="ver-mais">ver mais</span></a>
+        </cartao-chuva>
 
 
       </div>
