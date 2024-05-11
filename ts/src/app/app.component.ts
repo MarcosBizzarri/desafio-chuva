@@ -18,6 +18,9 @@ export class AppComponent implements OnInit{
 
   resumoFechado=true;
   mostraCriarTopico=true;
+  mostrarFormulario=false;
+  mostrarCriarNovoTopico=false;
+  mostrarImagem=false;
 textoResumo=``;
 quebrarTexto() {
   this.textoResumo=this.textoResumoCompleto.substring(0,600).concat('... ')
@@ -33,6 +36,14 @@ if ( this.resumoFechado==true){
 }
 
 criarTopico() {
-  this.mostraCriarTopico=false
+  this.mostraCriarTopico=false;
+  this.mostrarFormulario=true;
+  this.mostrarCriarNovoTopico=false;
+}
+enviar() {
+  this.mostraCriarTopico=false;
+  this.mostrarFormulario=false;
+  this.mostrarCriarNovoTopico=true;
+  this.mostrarImagem=true;
 }
 }

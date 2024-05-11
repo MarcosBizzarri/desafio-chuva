@@ -60,14 +60,14 @@ Universidade Federal do Rio de Janeiro
       <div class="row resumo">
         <cartao-chuva titulo="Discussões">
           <!-- Inicio do componente pos envio -->
-          <div class="row">
+          <div *ngIf="!mostraCriarTopico && !mostrarFormulario && mostrarCriarNovoTopico" class="row">
             <p>Titulo</p>
             <p>Subtitulo</p>
             <p>conteudo</p>
-            <button class="btn col-md-2 botao-laranja"> Criar novo tópico </button>
+            <button (click)="criarTopico()" class="btn col-md-2 botao-laranja"> Criar novo tópico </button>
           </div>
           <!-- Fim do componente pos envio -->
-        <div *ngIf="!mostraCriarTopico">
+        <div *ngIf="!mostraCriarTopico && mostrarFormulario">
           <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
 
           <form>
@@ -82,7 +82,7 @@ Universidade Federal do Rio de Janeiro
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
           </form>
-          <button class="btn col-md-2 botao-laranja"> Enviar</button>
+          <button (click)="enviar()" class="btn col-md-2 botao-laranja"> Enviar</button>
         </div>
         <div *ngIf="mostraCriarTopico">
           <h6  class="texto-compartilhar">Compartilhe suas ideias ou dúvidas com os autores!</h6>
@@ -99,6 +99,7 @@ Universidade Federal do Rio de Janeiro
           </div>
         </div>
          <div class="row"> 
+          <img *ngIf="mostrarImagem" src="assets/img/cartao-topico.png" alt="">
           <topico-chuva titulo="Assunto da pergunta aparece aqui" 
           subTitulo="Carlos Henrique Santos" 
           conteudo="Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo..."></topico-chuva>
