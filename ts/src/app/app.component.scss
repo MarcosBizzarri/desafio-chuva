@@ -26,11 +26,28 @@ h2 {
 color: #ED7839;
 }
 
+.titulo-assunto {
+  color: #ED7839;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .botao-laranja {
   background-color: #ED7839;
   color: white;
   margin: 3px;
+  float: right;
 
+}
+
+.paragrafo-centro {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn-enviar{
+  
+padding-right: 10px;
 }
 
 .video-chuva {
@@ -39,6 +56,8 @@ color: #ED7839;
   height: 439px;
 
 }
+
+
 
 
 .div-botao {
@@ -86,8 +105,39 @@ width: 79px;
   padding-top: 30px;
 }
 
+
+
+.presentation {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.presentation-info,
+.authors,
+.affiliations {
+  margin-bottom: 20px;
+}
+
+
+
+.author-list,
+.affiliation-list {
+  padding-left: 20px;
+}
+
+
+.affiliation-item {
+  list-style: disc;
+  color: #ADA0A0;
+}
+
+
 p {
   margin: 0;
+  text-align: center;
 }
 
 .spacer {
